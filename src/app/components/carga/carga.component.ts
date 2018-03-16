@@ -5,22 +5,27 @@ import { CargaImagenesService } from '../../providers/carga-imagenes.service';
 @Component({
   selector: 'app-carga',
   templateUrl: './carga.component.html',
-  styleUrls: ['./carga.component.css']
+  styles: []
 })
 export class CargaComponent implements OnInit {
 
-  archivos: FileItem[] = [];
   estaSobreElemento = false;
+  archivos: FileItem[] = [];
 
-  constructor(public _CI: CargaImagenesService) { }
+  constructor( public _cargaImagenes: CargaImagenesService ) { }
 
   ngOnInit() {
   }
 
   cargarImagenes() {
-    this._CI.cargarImagenesFirebase(this.archivos);
-
+    this._cargaImagenes.cargarImagenesFirebase( this.archivos );
   }
+
+  limpiarArchivos() {
+    this.archivos = [];
+  }
+
+
 
   pruebaSobreElemento(evento) {
     console.log(evento);
