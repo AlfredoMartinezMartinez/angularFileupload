@@ -1,6 +1,6 @@
 # Fotosfirebase
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
+The service to upload photos is closed, use your own firebase application to use it.This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
 
 ## Development server
 
